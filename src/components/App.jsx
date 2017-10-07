@@ -1,7 +1,19 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { connect } from 'react-redux';
 
-class App extends React.Component {
+
+@connect((store) => {
+  return {
+    query: store.query,
+    results: store.results,
+    users: store.users,
+    currentUser: store.currentUser,
+    userSongs: store.userSongs
+  };
+})
+
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

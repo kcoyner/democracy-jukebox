@@ -8,12 +8,8 @@ class Search extends React.Component{
   constructor(props) {
     super(props)
     this.state = {
-      query: '',
-      results: [],
-      users: [],
-      currentUser: '',
-      usersSongs: []
     }
+
     this.onSearch = this.onSearch.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onAdd = this.onAdd.bind(this);
